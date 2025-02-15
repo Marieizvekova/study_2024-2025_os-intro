@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru-RU" xml:lang="ru-RU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Извекова Мария Петровна" />
+  <title>Лабораторная работа 1</title>
+  <style>
+    html {
+      font-family: Noto Sans Mono;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Лабораторная работа 1</h1>
+<p class="subtitle">Простые модели компьютерной сети</p>
+<p class="author">Извекова Мария Петровна</p>
+</header>
+<h1 id="информация">Информация</h1>
+<h2 id="докладчик">Докладчик</h2>
+<div class="columns" data-align="center">
+<div class="column" style="width:60%;">
+<ul>
+<li>Извекова Мария Петровна</li>
+<li>студентка 3 курса</li>
+<li>факультет Физико-математических и естественных наук</li>
+<li>Российский университет дружбы народов</li>
+</ul>
+</div><div class="column" style="width:30%;">
+<p><img src="./image/photo_my.jpg" /></p>
+</div>
+</div>
+<h1 id="вводная-часть">Вводная часть</h1>
+<h2 id="цели-и-задачи">Цели и задачи</h2>
+<p>Приобретение навыков моделирования сетей передачи данных с помощью
+средства имитационного моделирования NS-2, а также анализ полученных
+результатов моделирования.</p>
+<h1 id="задание">Задание</h1>
+<ol type="1">
+<li>Создание шаблона сценария для NS-2</li>
+<li>Построение топологии сети из двух узлов и одного соединения</li>
+<li>Построение усложненной топологиии сети</li>
+<li>Построение кольцевой топологии сети</li>
+</ol>
+<h1 id="теоретическое-введение">Теоретическое введение</h1>
+<p>Network Simulator (NS-2) — один из программных симуляторов
+моделирования процессов в компьютерных сетях. NS-2 позволяет описать
+топологию сети, конфигурацию источников и приёмников трафика, параметры
+соединений (полосу пропускания, задержку, вероятность потерь пакетов и
+т.д.) и множество других параметров моделируемой системы.</p>
+<h1 id="выполнение-лабораторной-работы">Выполнение лабораторной
+работы</h1>
+<h1 id="создание-шаблона-сценария-для-ns-2">1. Создание шаблона сценария
+для NS-2</h1>
+<p><img src="./image/photo_3.jpg" id="fig:001" style="width:60.0%" />
+<img src="./image/photo_4.jpg" id="fig:002" style="width:60.0%" /></p>
+<h1 id="построение-топологии-сети-из-двух-узлов-и-одного-соединения">2.
+Построение топологии сети из двух узлов и одного соединения</h1>
+<p><img src="./image/photo_6.jpg" id="fig:003"
+style="width:60.0%" /></p>
+<h1 id="построение-усложненной-топологиии-сети">3. Построение
+усложненной топологиии сети</h1>
+<p><img src="./image/photo_10.jpg" id="fig:004"
+style="width:60.0%" /></p>
+<h1 id="построение-кольцевой-топологии-сети">4. Построение кольцевой
+топологии сети</h1>
+<p><img src="./image/photo_13.jpg" id="fig:005"
+style="width:60.0%" /></p>
+<p><img src="./image/photo_15.jpg" id="fig:006"
+style="width:60.0%" /></p>
+<p><img src="./image/photo_17.jpg" id="fig:007"
+style="width:60.0%" /></p>
+<h2 id="задание-1">5. Задание</h2>
+<p><img src="./image/photo_19.jpg" id="fig:008"
+style="width:60.0%" /></p>
+<p><img src="./image/photo_20.jpg" id="fig:009"
+style="width:60.0%" /></p>
+<h1 id="вывод">Вывод</h1>
+<p>Приобретели навыкы моделирования сетей передачи данных с помощью
+средства имитационного моделирования NS-2, а также проанализировали
+полученные результаты моделирования.</p>
+<h1 id="спасибо-за-внимание">Спасибо за внимание!</h1>
+</body>
+</html>
