@@ -1,0 +1,117 @@
+<h1 id="докладчик">Докладчик</h1>
+<div class="columns" data-align="center">
+<div class="column" style="width:70%;">
+<ul>
+<li>Извекова Мария Петровна</li>
+<li>студентка 3-го курса</li>
+<li>Российский университет дружбы народов</li>
+<li><a href="mailto:1132226460@pfur.ru">1132226460@pfur.ru</a></li>
+</ul>
+</div><div class="column" style="width:30%;">
+<p><img src="./image/my_photo.jpg" /></p>
+</div>
+</div>
+<h1 id="цели-и-задачи">Цели и задачи</h1>
+<p>Реализовать модель “хищник-жертва” в xcos.</p>
+<ol type="1">
+<li>Реализовать модель “хищник-жертва” в xcos;</li>
+<li>Реализовать модель “хищник-жертва” с помощью блока Modelica generic
+в xcos;</li>
+<li>Реализовать модель “хищник-жертва” в OpenModelica</li>
+</ol>
+<h1 id="выполнение-лабораторной-работы">Выполнение лабораторной
+работы</h1>
+<p>Модель «хищник–жертва» (модель Лотки — Вольтерры) представляет собой
+модель межвидовой конкуренции. В математической форме модель имеет
+вид:</p>
+<p>где x — количество жертв; y — количество хищников; a,b , c,d —
+коэффициенты, отражающие взаимодействия между видами: a— коэффициент
+рождаемости жертв; b — коэффициент убыли жертв; c— коэффициент рождения
+хищников; d— коэффициент убыли хищников.</p>
+<h1 id="section"></h1>
+<p>Зафиксируем начальные данные: a = 2, b = 1, c = 0, 3, d = 1, x(0) =
+2, y(0) = 1. В меню Моделирование, Задать переменные окружения зададим
+значения коэффициентов a, b, c, d (рис. <span class="citation"
+data-cites="fig:001">[-@fig:001]</span>).</p>
+<p><img src="image/photo_1.jpg" id="fig:001" style="width:60.0%" /></p>
+<h1 id="section-1"></h1>
+<p>Для реализации модели в дополнение к блокам CLOCK_c, CSCOPE, TEXT_f,
+MUX, INTEGRAL_m, GAINBLK_f, SUMMATION, PROD_f потребуется</p>
+<p><img src="image/photo_2.jpg" id="fig:002" style="width:60.0%" /></p>
+<h1 id="section-2"></h1>
+<p>Готовая модель «хищник–жертва» представлена на рис. (рис. <span
+class="citation" data-cites="fig:002">[-@fig:002]</span>).</p>
+<p><img src="image/photo_3.jpg" id="fig:003" style="width:60.0%" /></p>
+<h1 id="section-3"></h1>
+<p>В параметрах блоков интегрирования необходимо задать начальные
+значения x(0) = 2, y(0) = 1</p>
+<div class="columns">
+<div class="column">
+<p><img src="image/photo_7.jpg" id="fig:004" style="width:60.0%" /></p>
+</div><div class="column">
+<p><img src="image/photo_6.jpg" id="fig:005" style="width:60.0%" /></p>
+</div>
+</div>
+<h1 id="section-4"></h1>
+<p>В меню Моделирование, Установка необходимо задать конечное время
+интегрирования, равным времени моделирования: 30.</p>
+<p><img src="image/photo_8.jpg" id="fig:006" style="width:60.0%" /></p>
+<h1 id="section-5"></h1>
+<p>Результаты моделирования представлен на рис (рис. <span
+class="citation" data-cites="fig:007">[-@fig:007]</span>)</p>
+<p><img src="image/photo_4.jpg" id="fig:007" style="width:70.0%" /></p>
+<h1 id="реализация-модели-с-помощью-блока-modelica-в-xcos">Реализация
+модели с помощью блока Modelica в xcos</h1>
+<p>Для реализации модели (рис. <span class="citation"
+data-cites="fig:002">[-@fig:002]</span>) с помощью языка Modelica
+потребуются следующие блоки xcos: CLOCK_c, CSCOPE, CSCOPXY, TEXT_f, MUX,
+CONST_m и MBLOCK (Modelica generic).</p>
+<p><img src="image/photo_5.jpg" id="fig:008" style="width:70.0%" /></p>
+<h1 id="section-6"></h1>
+<p>Как и ранее, задаём значения коэффициентов a, b, c, d. Параметры
+блока Modelica представлены на (рис. <span class="citation"
+data-cites="fig:010">[-@fig:010]</span>) . Переменные на входе (“a”,
+“b”, “c”, “d”) и выходе (“x”, “y”) блока заданы как внешние (“E”).</p>
+<div class="columns">
+<div class="column">
+<p><img src="image/photo_1.jpg" id="fig:009" style="width:60.0%" /></p>
+</div><div class="column">
+<p><img src="image/photo_9.jpg" id="fig:010" style="width:60.0%" /></p>
+</div>
+</div>
+<h1 id="section-7"></h1>
+<p>class generic ////automatically generated //// //input variables Real
+a,b,c,d; //output variables // Real x,y; ////do not modif above this
+line //// Real x(start=2), y(start=1); // Модель хищник-жертва equation
+der(x) = a<em>x - b</em>x<em>y; der(y) = c</em>x<em>y - d</em>y; end
+generic;</p>
+<h1 id="section-8"></h1>
+<p>Готовая модель «хищник–жертва» представлена на рис. <span
+class="citation" data-cites="fig:011">[-@fig:011]</span></p>
+<p><img src="image/photo_10.jpg" id="fig:011" style="width:70.0%" /></p>
+<h1 id="section-9"></h1>
+<p>Результат второго моделирования представлен на рис (рис. <span
+class="citation" data-cites="fig:012">[-@fig:012]</span>)</p>
+<p><img src="image/photo_11.jpg" id="fig:012" style="width:70.0%" /></p>
+<h1 id="реализовать-модель-хищник-жертва-в-openmodelica">Реализовать
+модель “хищник-жертва” в OpenModelica</h1>
+<p>Реализуем модель «хищник – жертва» в OpenModelica. Построим графики
+изменения численности популяций и фазовый портрет.</p>
+<p><img src="image/photo_12.jpg" id="fig:012" style="width:70.0%" /></p>
+<h1 id="section-10"></h1>
+<p>Выполним симуляцию, поставим конечное время 30с. Получим график
+изменения численности хищников и жертв (рис. <span class="citation"
+data-cites="fig:014">[-@fig:014]</span>), а также фазовый портрет (рис.
+<span class="citation" data-cites="fig:015">[-@fig:015]</span>).</p>
+<p><img src="image/photo_13.jpg" id="fig:013" style="width:70.0%" /></p>
+<h1 id="section-11"></h1>
+<div class="columns">
+<div class="column">
+<p><img src="image/photo_14.jpg" id="fig:014" style="width:70.0%" /></p>
+</div><div class="column">
+<p><img src="image/photo_15.jpg" id="fig:015" style="width:70.0%" /></p>
+</div>
+</div>
+<h1 id="вывод">Вывод</h1>
+<p>В процессе выполнения данной лабораторной реализована модель
+“хищник-жертва” в xcos.</p>
