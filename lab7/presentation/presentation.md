@@ -63,7 +63,7 @@ header-includes:
 ::: columns
 ::: column
 ![Суперблок для поступления заявок](image/photo_2.png){#fig:004 width=60%}
-::::
+:::
 
 ::: column
 ![Вывод суперблока](image/photo_3.png){#fig:005 width=40%}
