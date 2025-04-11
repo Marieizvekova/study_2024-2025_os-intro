@@ -1,0 +1,187 @@
+<h1 id="докладчик">Докладчик</h1>
+<div class="columns" data-align="center">
+<div class="column" style="width:70%;">
+<ul>
+<li>Извекова Мария Петровна</li>
+<li>студентка 3-го курса</li>
+<li>Российский университет дружбы народов</li>
+<li><a href="mailto:1132226460@pfur.ru">1132226460@pfur.ru</a></li>
+</ul>
+</div><div class="column" style="width:30%;">
+<p><img src="./image/my_photo.jpg" /></p>
+</div>
+</div>
+<h1 id="цели-и-задачи">Цели и задачи</h1>
+<p>Построить модель SIR в xcos и OpenModelica.</p>
+<h1 id="задание">Задание</h1>
+<ol type="1">
+<li>Реализовать модель SIR в в xcos;</li>
+<li>Реализовать модель SIR с помощью блока Modelica в в xcos;</li>
+<li>Реализовать модель SIR в OpenModelica;</li>
+<li>Реализовать модель SIR с учётом процесса рождения / гибели особей в
+xcos (в том числе и с использованием блока Modelica), а также в
+OpenModelica;</li>
+<li>Построить графики эпидемического порога при различных значениях
+параметров модели (в частности изменяя параметр μ);</li>
+<li>Сделать анализ полученных графиков в зависимости от выбранных
+значений параметров модели.</li>
+</ol>
+<h1 id="выполнение-лабораторной-работы">Выполнение лабораторной
+работы</h1>
+<p><span class="math display">$$
+\begin{cases}
+\dot{s}(t) = -\beta s(t) i(t), \\
+\dot{i}(t) = \beta s(t) i(t) - \nu i(t), \\
+\dot{r}(t) = \nu i(t)
+\end{cases}
+$$</span></p>
+<p>где β - скорость распространения, ν - скорость выздоравления</p>
+<h1 id="section"></h1>
+<p>Зафиксируем начальные данные: β = 1 ν = .3 s(0)=0.999, r(0)=0,
+i(0)=0.001 В меню Моделирование, Установить контекст зададим значения
+переменных β и ν(рис. <span class="citation"
+data-cites="fig:001">[-@fig:001]</span>).</p>
+<figure id="fig:001">
+<img src="image/photo_1.png" style="width:70.0%"
+alt="Фиксирование переменных" />
+<figcaption aria-hidden="true">Фиксирование переменных</figcaption>
+</figure>
+<h1 id="section-1"></h1>
+<figure id="fig:002">
+<img src="image/photo_7.png" style="width:70.0%" alt="Готовая модель" />
+<figcaption aria-hidden="true">Готовая модель</figcaption>
+</figure>
+<h1 id="section-2"></h1>
+<div class="columns">
+<div class="column">
+<p><img src="image/photo_3.png" id="fig:003" style="width:70.0%" /></p>
+</div><div class="column">
+<p><img src="image/photo_4.png" id="fig:004" style="width:70.0%" /></p>
+</div>
+</div>
+<h1 id="section-3"></h1>
+<div class="columns">
+<div class="column">
+<p><img src="image/photo_5.png" id="fig:005" style="width:70.0%" /></p>
+</div><div class="column">
+<p><img src="image/photo_6.png" id="fig:006" style="width:70.0%" /></p>
+</div>
+</div>
+<h1 id="section-4"></h1>
+<figure id="fig:007">
+<img src="image/photo_2.png" style="width:70.0%"
+alt="Конечное время интегрирования" />
+<figcaption aria-hidden="true">Конечное время
+интегрирования</figcaption>
+</figure>
+<h1 id="section-5"></h1>
+<figure id="fig:008">
+<img src="image/photo_8.png" style="width:70.0%"
+alt="Результат моделирования" />
+<figcaption aria-hidden="true">Результат моделирования</figcaption>
+</figure>
+<h1 id="реализация-модели-с-помощью-блока-modelica-в-xcos">Реализация
+модели с помощью блока Modelica в xcos</h1>
+<div class="columns">
+<div class="column">
+<figure id="fig:010">
+<img src="image/photo_10.png" style="width:70.0%"
+alt="Фиксированные переменные" />
+<figcaption aria-hidden="true">Фиксированные переменные</figcaption>
+</figure>
+</div><div class="column">
+<figure id="fig:011">
+<img src="image/photo_11.png" style="width:70.0%"
+alt="Функция generic" />
+<figcaption aria-hidden="true">Функция generic</figcaption>
+</figure>
+</div>
+</div>
+<h1 id="section-6"></h1>
+<figure id="fig:012">
+<img src="image/photo_8.png" style="width:70.0%"
+alt="Результат моделирования" />
+<figcaption aria-hidden="true">Результат моделирования</figcaption>
+</figure>
+<h1 id="упражнение">Упражнение</h1>
+<pre><code>```modelica parameter Real I_0 = 0.001; parameter Real R_0 = 0; parameter Real S_0 = 0.999; parameter Real beta = 1; parameter Real nu = 0.3; Real s(start=S_0); Real i(start=I_0); Real r(start=R_0); equation der(s) = -beta * s * i; der(i) = beta * s * i - nu * i; der(r) = nu * i; ``` </code></pre>
+<h1 id="section-7"></h1>
+<figure id="fig:013">
+<img src="image/21.png" style="width:70.0%" alt="Время симмуляции" />
+<figcaption aria-hidden="true">Время симмуляции</figcaption>
+</figure>
+<h1 id="section-8"></h1>
+<figure id="fig:014">
+<img src="image/photo_13.png" style="width:70.0%"
+alt="Результат моделирования" />
+<figcaption aria-hidden="true">Результат моделирования</figcaption>
+</figure>
+<h1 id="задание-для-самостоятельного-выполнения">Задание для
+самостоятельного выполнения</h1>
+<p><span class="math display">$$
+\begin{cases}
+\dot{s}(t) = -\beta s(t) i(t) + \mu \left(N - s(t)\right), \\
+\dot{i}(t) = \beta s(t) i(t) - \nu i(t) - \mu i(t), \\
+\dot{r}(t) = \nu i(t) - \mu r(t)
+\end{cases}
+$$</span></p>
+<h1 id="section-9"></h1>
+<figure id="fig:015">
+<img src="image/14.png" style="width:70.0%" alt="Готовая модель" />
+<figcaption aria-hidden="true">Готовая модель</figcaption>
+</figure>
+<h1 id="section-10"></h1>
+<figure id="fig:016">
+<img src="image/15.png" style="width:70.0%" alt="Задаем параметры" />
+<figcaption aria-hidden="true">Задаем параметры</figcaption>
+</figure>
+<h1 id="section-11"></h1>
+<figure id="fig:017">
+<img src="image/16.png" style="width:70.0%"
+alt="Результат моделирования" />
+<figcaption aria-hidden="true">Результат моделирования</figcaption>
+</figure>
+<h1 id="section-12"></h1>
+<figure id="fig:018">
+<img src="image/18.png" style="width:70.0%" alt="Модель с блоком" />
+<figcaption aria-hidden="true">Модель с блоком</figcaption>
+</figure>
+<h1 id="section-13"></h1>
+<div class="columns">
+<div class="column">
+<p><img src="image/19.png" id="fig:019" style="width:70.0%" /></p>
+</div><div class="column">
+<p><img src="image/20.png" id="fig:020" style="width:70.0%" /></p>
+</div>
+</div>
+<h1 id="section-14"></h1>
+<figure id="fig:021">
+<img src="image/16.png" style="width:70.0%"
+alt="Результат моделирования при μ=0.1" />
+<figcaption aria-hidden="true">Результат моделирования при
+μ=0.1</figcaption>
+</figure>
+<figure id="fig:022">
+<img src="image/17.png" style="width:70.0%"
+alt="Результат моделирования при μ=0.9" />
+<figcaption aria-hidden="true">Результат моделирования при
+μ=0.9</figcaption>
+</figure>
+<h1 id="section-15"></h1>
+<pre><code>```modelica parameter Real I_0 = 0.001; parameter Real R_0 = 0; parameter Real S_0 = 0.999; parameter Real N = 1; parameter Real beta = 1; parameter Real nu = 0.3; parameter Real mu = 0.5; Real s(start=S_0); Real i(start=I_0); Real r(start=R_0); equation der(s) = -beta * s * i + mu * i + mu * r; der(i) = beta * s * i - nu * i - mu * i; der(r) = nu * i - mu * r; ``` </code></pre>
+<h1 id="section-16"></h1>
+<figure id="fig:023">
+<img src="image/22.png" style="width:70.0%"
+alt="Результат моделирования при μ=0.1" />
+<figcaption aria-hidden="true">Результат моделирования при
+μ=0.1</figcaption>
+</figure>
+<figure id="fig:024">
+<img src="image/23.png" style="width:70.0%"
+alt="Результат моделирования при μ=0.9" />
+<figcaption aria-hidden="true">Результат моделирования при
+μ=0.9</figcaption>
+</figure>
+<h1 id="вывод">Вывод</h1>
+<p>В процессе выполнения данной лабораторной работы была построена
+модель SIR в xcos и OpenModelica</p>
