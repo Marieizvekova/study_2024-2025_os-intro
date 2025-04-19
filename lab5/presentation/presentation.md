@@ -2,7 +2,7 @@
 ## Front matter
 lang: ru-RU
 title: "Лабораторная работа 5"
-subtitle: "Модель хищник-жертва"
+subtitle: "Модель ЭПИДЕМИИ SIR"
 author:
   - Извекова Мария Петровна
 institute:

@@ -1,0 +1,73 @@
+<h1 id="докладчик">Докладчик</h1>
+<div class="columns" data-align="center">
+<div class="column" style="width:70%;">
+<ul>
+<li>Извекова Мария Петровна</li>
+<li>студентка 3-го курса</li>
+<li>Российский университет дружбы народов</li>
+<li><a href="mailto:1132226460@pfur.ru">1132226460@pfur.ru</a></li>
+</ul>
+</div><div class="column" style="width:30%;">
+<p><img src="./image/my_photo.jpg" /></p>
+</div>
+</div>
+<h1 id="цель-работы">Цель работы</h1>
+<p>Реализовать модель M|M|1 в CPN tools.</p>
+<h1 id="задание">Задание</h1>
+<ol type="1">
+<li>Реализовать в CPN Tools модель системы массового обслуживания
+M|M|1.</li>
+<li>Настроить мониторинг параметров моделируемой системы и нарисовать
+графики очереди.</li>
+</ol>
+<h1 id="выполнение-лабораторной-работы">Выполнение лабораторной
+работы</h1>
+<p><img src="image/1.png" id="fig:001" style="width:70.0%" /></p>
+<h1 id="section"></h1>
+<p><img src="image/6.png" id="fig:002" style="width:70.0%" /></p>
+<h1 id="section-1"></h1>
+<p><img src="image/7.png" id="fig:003" style="width:70.0%" /></p>
+<h1 id="section-2"></h1>
+<p><img src="image/14.png" id="fig:004" style="width:70.0%" /></p>
+<h1 id="section-3"></h1>
+<p><img src="image/11.png" id="fig:005" style="width:70.0%" /></p>
+<h1 id="section-4"></h1>
+<p><img src="image/12.png" id="fig:006" style="width:70.0%" /></p>
+<h1 id="section-5"></h1>
+<p><img src="image/13.png" id="fig:007" style="width:70.0%" /></p>
+<h1 id="мониторинг-параметров-моделируемой-системы">Мониторинг
+параметров моделируемой системы</h1>
+<p><img src="image/21.png" id="fig:008" style="width:70.0%" /></p>
+<h1 id="section-6"></h1>
+<p><img src="image/27.png" id="fig:009" style="width:70.0%" /></p>
+<h1 id="section-7"></h1>
+<pre><code>#!/usr/bin/gnuplot -persist
+
+set encoding utf8
+set term pngcairo font &quot;Helvetica,9&quot;
+
+set out &#39;win_1.png&#39;
+plot &quot;Queue_Delay.log&quot; using ($4):($1) with lines</code></pre>
+<h1 id="section-8"></h1>
+<p><img src="image/ГРАФИК.png" id="fig:010" style="width:70.0%" /></p>
+<h1 id="section-9"></h1>
+<p><img src="image/23.png" id="fig:011" style="width:70.0%" /></p>
+<h1 id="section-10"></h1>
+<p><img src="image/28.png" id="fig:012" style="width:70.0%" /></p>
+<h1 id="section-11"></h1>
+<p><img src="image/24.png" id="fig:013" style="width:70.0%" /></p>
+<h1 id="section-12"></h1>
+<p><img src="image/29.png" id="fig:014" style="width:70.0%" /></p>
+<h1 id="section-13"></h1>
+<pre><code>#!/usr/bin/gnuplot -persist
+set encoding utf8
+set term pngcairo font &quot;Helvetica,9&quot;
+
+set out &#39;win_3.png&#39;
+set style line 2
+plot [0:] [0:1.2] &quot;Long_Delay_Time.log&quot; using ($4):($1) with lines</code></pre>
+<h1 id="section-14"></h1>
+<p><img src="image/26.png" id="fig:014" style="width:70.0%" /></p>
+<h1 id="выводы">Выводы</h1>
+<p>В процессе выполнения данной лабораторной работы я реализовала модель
+системы массового обслуживания M|M|1 в CPN Tools.</p>
