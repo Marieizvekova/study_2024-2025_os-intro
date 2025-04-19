@@ -53,40 +53,40 @@ header-includes:
 
 # Выполнение лабораторной работы
 
-![](image/1.png){#fig:001 width=70%}
+![Граф сети системы обработки заявок](image/1.png){#fig:001 width=70%}
 
 #
 
-![](image/6.png){#fig:002 width=70%}
+![Граф генератор заявок системы](image/6.png){#fig:002 width=70%}
 
 #
 
-![](image/7.png){#fig:003 width=70%}
+![Граф процесса обработки заявок на сервере системы](image/7.png){#fig:003 width=70%}
 
 
 #
 
-![](image/14.png){#fig:004 width=70%}
+![Задание декларации](image/14.png){#fig:004 width=70%}
 
 #
 
-![](image/11.png){#fig:005 width=70%}
+![Параметры элементов основного графа системы обработки заявок в очереди](image/11.png){#fig:005 width=70%}
 
 #
 
-![](image/12.png){#fig:006 width=70%}
+![Параметры элементов обработчика заявок системы](image/12.png){#fig:006 width=70%}
 
 #
 
-![](image/13.png){#fig:007 width=70%}
+![Параметры элементов генератора заявок системы](image/13.png){#fig:007 width=70%}
 
 # Мониторинг параметров моделируемой системы
 
-![](image/21.png){#fig:008 width=70%}
+![Функция Predicate монитора Ostanovka и функция Observer монитора Queue_Delay](image/21.png){#fig:008 width=70%}
 
 #
 
-![](image/27.png){#fig:009 width=70%}
+![Queue_Delay.log](image/27.png){#fig:009 width=70%}
 
 #
 
@@ -102,19 +102,19 @@ plot "Queue_Delay.log" using ($4):($1) with lines
 
 #
 
-![](image/ГРАФИК.png){#fig:010 width=70%}
+![График изменения задержки в очереди](image/ГРАФИК.png){#fig:010 width=70%}
 
 #
 
-![](image/23.png){#fig:011 width=70%}
+![Функция Observer монитора Queue Delay Real](image/23.png){#fig:011 width=70%}
 
 #
 
-![](image/28.png){#fig:012 width=70%}
+![Значения в действительных числах](image/28.png){#fig:012 width=70%}
 
 #
 
-![](image/24.png){#fig:013 width=70%}
+![Функция Observer монитора Long Delay Time](image/24.png){#fig:013 width=70%}
 
 #
 
@@ -134,7 +134,7 @@ plot [0:] [0:1.2] "Long_Delay_Time.log" using ($4):($1) with lines
 
 #
 
-![](image/26.png){#fig:014 width=70%}
+![ Периоды времени, когда значения задержки в очереди превышали заданное значение](image/26.png){#fig:014 width=70%}
 
 # Выводы
 
