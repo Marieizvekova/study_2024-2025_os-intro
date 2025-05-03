@@ -1,0 +1,107 @@
+<h1 id="докладчик">Докладчик</h1>
+<div class="columns" data-align="center">
+<div class="column" style="width:70%;">
+<ul>
+<li>Извекова Мария Петровна</li>
+<li>студентка 3-го курса</li>
+<li>Российский университет дружбы народов</li>
+<li><a href="mailto:1132226460@pfur.ru">1132226460@pfur.ru</a></li>
+</ul>
+</div><div class="column" style="width:30%;">
+<p><img src="./image/my_photo.jpg" /></p>
+</div>
+</div>
+<h1 id="цель-работы">Цель работы</h1>
+<p>Задача для самостоятельного выполнения</p>
+<h1 id="задание">Задание</h1>
+<ol type="1">
+<li>Используя теоретические методы анализа сетей Петри, проведите анализ
+сети (с помощью построения дерева достижимости). Определите, является ли
+сеть безопасной, ограниченной, сохраняющей, имеются ли тупики.</li>
+<li>Промоделируйте сеть Петри с помощью CPNTools.</li>
+<li>Вычислите пространство состояний. Сформируйте отчёт о пространстве
+состояний и проанализируйте его. Постройте граф пространства
+состояний.</li>
+</ol>
+<h1 id="схема-и-описание-модели">Схема и описание модели</h1>
+<p>Сеть Петри моделируемой системы представлена на рис. <span
+class="citation" data-cites="fig:001">[-@fig:001]</span>. Множество
+позиций: P1 — состояние оперативной памяти (свободна / занята); P2 —
+состояние внешнего запоминающего устройства B1 (свободно / занято); P3 —
+состояние внешнего запоминающего устройства B2 (свободно / занято); P4 —
+работа на ОП и B1 закончена; P5 — работа на ОП и B2 закончена; P6 —
+работа на ОП, B1 и B2 закончена;</p>
+<p>Множество переходов: T1 — ЦП работает только с RAM и B1; T2 —
+обрабатываются данные из RAM и с B1 переходят на устройство вывода; T3 —
+CPU работает только с RAM и B2; T4 — обрабатываются данные из RAM и с B2
+переходят на устройство вывода; T5 — CPU работает только с RAM и с B1,
+B2; T6 — обрабатываются данные из RAM, B1, B2 и переходят на устройство
+вывода</p>
+<h1 id="section"></h1>
+<figure id="fig:001">
+<img src="image/2.png" style="width:70.0%"
+alt="Схема сети, реализованной в cpntools" />
+<figcaption aria-hidden="true">Схема сети, реализованной в
+cpntools</figcaption>
+</figure>
+<h1 id="анализ-сети-петри">Анализ сети Петри</h1>
+<figure id="fig:002">
+<img src="image/1.png" style="width:70.0%" alt="Дерево достижимости" />
+<figcaption aria-hidden="true">Дерево достижимости</figcaption>
+</figure>
+<h1 id="реализация-в-cpntools">Реализация в CPNTOOLS</h1>
+<figure id="fig:003">
+<img src="image/2.png" style="width:70.0%"
+alt="Схема сети, реализованной в cpntools" />
+<figcaption aria-hidden="true">Схема сети, реализованной в
+cpntools</figcaption>
+</figure>
+<h1 id="section-1"></h1>
+<figure id="fig:004">
+<img src="image/3.png" style="width:70.0%" alt="Декларация" />
+<figcaption aria-hidden="true">Декларация</figcaption>
+</figure>
+<h1 id="section-2"></h1>
+<figure id="fig:005">
+<img src="image/4.png" style="width:70.0%" alt="Начальные значения" />
+<figcaption aria-hidden="true">Начальные значения</figcaption>
+</figure>
+<h1 id="section-3"></h1>
+<figure id="fig:006">
+<img src="image/5.png" style="width:70.0%"
+alt="Модель сети петри в работе" />
+<figcaption aria-hidden="true">Модель сети петри в работе</figcaption>
+</figure>
+<h1 id="section-4"></h1>
+<div class="columns">
+<div class="column">
+<figure id="fig:007">
+<img src="image/6.png" style="width:50.0%" alt="Граф состояний" />
+<figcaption aria-hidden="true">Граф состояний</figcaption>
+</figure>
+</div><div class="column">
+<figure id="fig:008">
+<img src="image/9.png" style="width:60.0%" alt="Граф состояний" />
+<figcaption aria-hidden="true">Граф состояний</figcaption>
+</figure>
+</div>
+</div>
+<h1 id="section-5"></h1>
+<div class="columns">
+<div class="column">
+<figure id="fig:009">
+<img src="image/7.png" style="width:70.0%" alt="Отчет 1" />
+<figcaption aria-hidden="true">Отчет 1</figcaption>
+</figure>
+</div><div class="column">
+<figure id="fig:010">
+<img src="image/8.png" style="width:70.0%" alt="Отчет 2" />
+<figcaption aria-hidden="true">Отчет 2</figcaption>
+</figure>
+</div>
+</div>
+<h1 id="вывод">Вывод</h1>
+<p>В данной лабораторной работе я выполнила задание для самостоятельной
+работы, проанализировала сть петри, построила дерево достижимости,
+реализовала сеть в CPNtools,построила граф состояний и проанализировала
+его</p>
