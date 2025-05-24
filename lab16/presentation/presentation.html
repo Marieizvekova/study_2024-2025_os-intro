@@ -1,0 +1,247 @@
+<h1 id="докладчик">Докладчик</h1>
+<div class="columns" data-align="center">
+<div class="column" style="width:70%;">
+<ul>
+<li>Извекова Мария Петровна</li>
+<li>студентка 3-го курса</li>
+<li>Российский университет дружбы народов</li>
+<li><a href="mailto:1132226460@pfur.ru">1132226460@pfur.ru</a></li>
+</ul>
+</div><div class="column" style="width:30%;">
+<p><img src="./image/my_photo.jpg" /></p>
+</div>
+</div>
+<h1 id="цель-работы">Цель работы</h1>
+<p>Построить 2 модели с двумя очередями обслуживания и с одной очередью
+обслуживания в gpss. обозначить оптимальное количество пропускных
+пунктов.</p>
+<h1 id="задание">Задание</h1>
+<p>Построить модели: 1. модель с двумя очередями обсуживания 2. с одной
+очередью обслуживания 3. Сделать сравнение двух моделей и обозначить
+оптимальное количество пропускных пунктов</p>
+<h1 id="постановка-задачи">Постановка задачи</h1>
+<p>На пограничном контрольно-пропускном пункте транспорта имеются 2
+пункта пропуска. Интервалы времени между поступлением автомобилей имеют
+экспоненциальное распределение со средним значением µ. Время прохождения
+автомобилями пограничного контроля имеет равномерное распределение на
+интервале [a, b]. Предлагается две стратегии обслуживания прибывающих
+автомобилей: 1) автомобили образуют две очереди и обслуживаются
+соответствующими пунктами пропуска; 2) автомобили образуют одну общую
+очередь и обслуживаются освободившимся пунктом пропуска.</p>
+<h1 id="выполнение-лабораторной-работы">Выполнение лабораторной
+работы</h1>
+<h2 id="построение-модели">Построение модели</h2>
+<figure id="fig:001">
+<img src="image/1.png" style="width:70.0%" alt="Построение модели 1" />
+<figcaption aria-hidden="true">Построение модели 1</figcaption>
+</figure>
+<h1 id="section"></h1>
+<div class="columns">
+<div class="column">
+<figure id="fig:002">
+<img src="image/2.png" style="width:70.0%" alt="Отчет модели 1" />
+<figcaption aria-hidden="true">Отчет модели 1</figcaption>
+</figure>
+</div><div class="column">
+<figure id="fig:003">
+<img src="image/3.png" style="width:70.0%" alt="Отчет модели 1" />
+<figcaption aria-hidden="true">Отчет модели 1</figcaption>
+</figure>
+</div>
+</div>
+<h1 id="section-1"></h1>
+<div class="columns">
+<div class="column">
+<figure id="fig:004">
+<img src="image/4.png" style="width:70.0%"
+alt="Построение модели для второй стратегии" />
+<figcaption aria-hidden="true">Построение модели для второй
+стратегии</figcaption>
+</figure>
+</div><div class="column">
+<figure id="fig:005">
+<img src="image/5.png" style="width:70.0%"
+alt="Отчет модели второй стратегии" />
+<figcaption aria-hidden="true">Отчет модели второй
+стратегии</figcaption>
+</figure>
+</div>
+</div>
+<h1 id="составим-таблицу-по-полученной-статистике">Составим таблицу по
+полученной статистике</h1>
+<table>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 19%" />
+<col style="width: 19%" />
+<col style="width: 19%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>Показатель</th>
+<th>стратегия 1 пункт 1</th>
+<th>стратегия 1 пункт 2</th>
+<th>стратегия 1 в целом</th>
+<th>стратегия 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Поступило автомобилей</td>
+<td>2928</td>
+<td>2925</td>
+<td>5853</td>
+<td>5719</td>
+</tr>
+<tr>
+<td>Обслужено автомобилей</td>
+<td>2540</td>
+<td>2536</td>
+<td>5076</td>
+<td>5049</td>
+</tr>
+<tr>
+<td>Коэффициент загрузки</td>
+<td>0,997</td>
+<td>0,996</td>
+<td>0,9965</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Максимальная длина очереди</td>
+<td>393</td>
+<td>393</td>
+<td>786</td>
+<td>668</td>
+</tr>
+<tr>
+<td>Средняя длина очереди</td>
+<td>187,098</td>
+<td>187,114</td>
+<td>374,212</td>
+<td>344,466</td>
+</tr>
+<tr>
+<td>Среднее время ожидания</td>
+<td>644,107</td>
+<td>644,823</td>
+<td>644,465</td>
+<td>607,138</td>
+</tr>
+</tbody>
+</table>
+<h1 id="оптимизация-модели-двух-стратегий-обслуживания">Оптимизация
+модели двух стратегий обслуживания</h1>
+<div class="columns">
+<div class="column">
+<figure id="fig:006">
+<img src="image/6.png" style="width:70.0%"
+alt="Первая оптимизация для первой модели" />
+<figcaption aria-hidden="true">Первая оптимизация для первой
+модели</figcaption>
+</figure>
+</div><div class="column">
+<figure id="fig:007">
+<img src="image/7.png" style="width:70.0%"
+alt="Отчет первой оптимизации" />
+<figcaption aria-hidden="true">Отчет первой оптимизации</figcaption>
+</figure>
+</div>
+</div>
+<h1 id="section-2"></h1>
+<figure id="fig:008">
+<img src="image/8.png" style="width:70.0%"
+alt="Вторая оптимизация для первой модели" />
+<figcaption aria-hidden="true">Вторая оптимизация для первой
+модели</figcaption>
+</figure>
+<h1 id="section-3"></h1>
+<div class="columns">
+<div class="column">
+<figure id="fig:009">
+<img src="image/9.png" style="width:70.0%"
+alt="Отчет второй оптимизации" />
+<figcaption aria-hidden="true">Отчет второй оптимизации</figcaption>
+</figure>
+</div><div class="column">
+<figure id="fig:010">
+<img src="image/10.png" style="width:70.0%"
+alt="Отчет второй оптимизации" />
+<figcaption aria-hidden="true">Отчет второй оптимизации</figcaption>
+</figure>
+</div>
+</div>
+<h1 id="section-4"></h1>
+<figure id="fig:011">
+<img src="image/11.png" style="width:70.0%"
+alt="Третья оптимизация для первой модели" />
+<figcaption aria-hidden="true">Третья оптимизация для первой
+модели</figcaption>
+</figure>
+<h1 id="section-5"></h1>
+<div class="columns">
+<div class="column">
+<figure id="fig:012">
+<img src="image/12.png" style="width:70.0%"
+alt="Отчет третий оптимизации" />
+<figcaption aria-hidden="true">Отчет третий оптимизации</figcaption>
+</figure>
+</div><div class="column">
+<figure id="fig:013">
+<img src="image/13.png" style="width:70.0%"
+alt="Отчет третий оптимизации" />
+<figcaption aria-hidden="true">Отчет третий оптимизации</figcaption>
+</figure>
+</div>
+</div>
+<h1 id="section-6"></h1>
+<div class="columns">
+<div class="column">
+<figure id="fig:014">
+<img src="image/14.png" style="width:70.0%"
+alt="Первая оптимизация для второй модели" />
+<figcaption aria-hidden="true">Первая оптимизация для второй
+модели</figcaption>
+</figure>
+</div><div class="column">
+<figure id="fig:015">
+<img src="image/15.png" style="width:70.0%"
+alt="Отчет первой оптимизации второй модели" />
+<figcaption aria-hidden="true">Отчет первой оптимизации второй
+модели</figcaption>
+</figure>
+</div>
+</div>
+<h1 id="section-7"></h1>
+<div class="columns">
+<div class="column">
+<figure id="fig:016">
+<img src="image/16.png" style="width:70.0%"
+alt="Вторая оптимизация для второй модели" />
+<figcaption aria-hidden="true">Вторая оптимизация для второй
+модели</figcaption>
+</figure>
+</div><div class="column">
+<figure id="fig:017">
+<img src="image/17.png" style="width:70.0%"
+alt="Отчет второй оптимизации второй модели" />
+<figcaption aria-hidden="true">Отчет второй оптимизации второй
+модели</figcaption>
+</figure>
+</div>
+</div>
+<h1 id="выводы">Выводы</h1>
+<p>В результате была реализована с помощью gpss:</p>
+<ol type="1">
+<li>модель с двумя очередями обсуживания</li>
+<li>с одной очередью обслуживания</li>
+<li>Сделать сравнение двух моделей и обозначить оптимальное количество
+пропускных пунктов</li>
+</ol>
+<h1 id="библиография">Библиография</h1>
+<ol type="1">
+<li><p>Королькова А. В., Кулябов Д. С. Модели обработки заказов</p></li>
+<li><p>Королькова А. В., Кулябов Д. С. Имитационное моделирование в
+GPSS</p></li>
+</ol>
